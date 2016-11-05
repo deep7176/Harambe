@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1057918770964",
+    "firebase_url": "https://harambe-2d04c.firebaseio.com",
+    "project_id": "harambe-2d04c",
+    "storage_bucket": "harambe-2d04c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057918770964:android:92d3e39ecc41d16b",
+        "android_client_info": {
+          "package_name": "com.harambe.app.harambe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057918770964-2nd2rnf87qe2lgbbk3cv1jfq92qb9o26.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqMFWftEyspdul5ipCtaCoKNOgVHz-zYI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

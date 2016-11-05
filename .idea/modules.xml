@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Harambe.iml" filepath="$PROJECT_DIR$/Harambe.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soundTouch/soundTouch.iml" filepath="$PROJECT_DIR$/soundTouch/soundTouch.iml" />
     </modules>
   </component>
 </project>

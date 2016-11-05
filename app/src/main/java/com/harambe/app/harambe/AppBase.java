@@ -2,6 +2,7 @@ package com.harambe.app.harambe;
 
 import android.app.Application;
 
+
 /**
  * Created by deep on 8/24/16.
  * the application singleton class
@@ -23,5 +24,6 @@ public class AppBase extends Application {
         AppBase.instance = this;
 
     }
+
 
 }

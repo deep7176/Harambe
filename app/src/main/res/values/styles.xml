@@ -17,5 +17,15 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="FbButton">
+        <item name="colorButtonNormal">@color/com_facebook_blue</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:text">@string/fb_login</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">88dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
 
 </resources>
