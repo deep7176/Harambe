@@ -15,6 +15,7 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -39,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
     private LoginManager lm;
     private ProgressDialog progressDialog;
 
-
     private Button loginBt;
     private CallbackManager callbackManager;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -47,17 +47,20 @@ public class LoginActivity extends AppCompatActivity {
     private FacebookCallback<LoginResult> facebookLoginCallback = new FacebookCallback<LoginResult>() {
         @Override
         public void onSuccess(LoginResult loginResult) {
-            handleFacebookAccessToken(loginResult.getAccessToken());
+            handleFacebookAccessToken(AccessToken.getCurrentAccessToken());
+            dismissDialog();
         }
 
         @Override
         public void onCancel() {
             T.s(LoginActivity.this, "Canceled");
+            dismissDialog();
         }
 
         @Override
         public void onError(FacebookException error) {
             T.s(LoginActivity.this, "" + error.getMessage());
+            dismissDialog();
         }
     };
 
@@ -93,6 +96,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        FacebookSdk.sdkInitialize(this);
 
         //Glide.with(this).load(R.drawable.bg).asBitmap().centerCrop().into(bgImageView);
 
@@ -158,8 +162,9 @@ public class LoginActivity extends AppCompatActivity {
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithCredential", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                        }else{
+                            goToMainPage();
                         }
 
                         // ...

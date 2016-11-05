@@ -18,8 +18,6 @@
 
     <string name="fb_login">Go Ape-Shit</string>
 
-    <string name="parse_key" translatable="false">X48BWXfGnMk6qDXTHiEcDz1nkq8RgEO9GgtEwf41</string>
-    <string name="parse_id" translatable="false">ISfgxLD8vGxQkeyZ7hUBPDD2RgX2gbmUyQCbwEnu</string>
-    <string name="fb_app_id" translatable="false">311474922520548</string>
+    <string name="fb_app_id" translatable="false">1804411386498933</string>
 
 </resources>

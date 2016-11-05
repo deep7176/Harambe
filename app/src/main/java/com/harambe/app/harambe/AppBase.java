@@ -2,6 +2,8 @@ package com.harambe.app.harambe;
 
 import android.app.Application;
 
+import com.facebook.FacebookSdk;
+
 
 /**
  * Created by deep on 8/24/16.
